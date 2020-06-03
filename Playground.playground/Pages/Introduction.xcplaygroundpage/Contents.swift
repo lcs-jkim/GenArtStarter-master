@@ -35,7 +35,7 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
  */
 
-// draws a rectangle but makes floaty circles?
+//draws a rectangle
 canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
 
 /*:
