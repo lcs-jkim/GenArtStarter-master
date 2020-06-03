@@ -17,15 +17,15 @@ class Sketch : NSObject {
         canvas = Canvas(width: 700, height: 700)
         
         // No fill on canvas
-        canvas.drawShapesWithFill = false
+        canvas.drawShapesWithFill = true
         
         // Create many instances of the Agent structure
-        for _ in 1...20 {
+        for _ in 1...5 {
             
-            let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: canvas.height / 2),
-                                     radius: 20,
+            let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: 600),
+                                     radius: 30,
                                      velocity: Vector(x: Double.random(in: -2...2),
-                                                      y: Double.random(in: -2...2)),
+                                                      y: 0 ),
                                      drawsUpon: canvas)
             
             agents.append(anotherAgent)
@@ -38,7 +38,7 @@ class Sketch : NSObject {
     func draw() {
        
         // Clear the canvas
-        clearCanvas()
+        
         
         // Update the position of the agent
         for agent in agents {
@@ -60,4 +60,5 @@ class Sketch : NSObject {
         
     }
    
+    
 }
