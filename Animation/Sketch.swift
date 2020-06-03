@@ -18,8 +18,9 @@ class Sketch : NSObject {
         
         // No fill on canvas
         canvas.drawShapesWithFill = true
+        canvas.fillColor = Color.purple
         
-        // This will come in handy to move the
+        // This will come in handy to make the circles
         var counter = 0
         
         // Create many instances of the Agent structure
@@ -42,9 +43,6 @@ class Sketch : NSObject {
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-       
-        // Clear the canvas
-        
         
         // Update the position of the agent
         for agent in agents {
