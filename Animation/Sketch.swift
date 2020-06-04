@@ -16,10 +16,10 @@ class Sketch : NSObject {
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
         
-        // This will come in handy to make the circles
+        // This will come in handy to keep track of how many loops it's been
               var counter = 0
         
-        // No fill on canvas
+        // no borders,shapes with fill
         canvas.drawShapesWithBorders = false
         canvas.drawShapesWithFill = true
         
@@ -28,6 +28,7 @@ class Sketch : NSObject {
         // Create many instances of the Agent structure
         for _ in 1...5 {
             
+            // Sets up speed var that will change to make sure the lines goes in the right direction
             var speed = -1
             
             if counter == 0 {
@@ -47,10 +48,10 @@ class Sketch : NSObject {
                                                       y: 0 ),
                                      drawsUpon: canvas)
             
-            
-            
+            // Makes the agent
             agents.append(anotherAgent)
             
+            // Adds to counter
             counter += 1
         }
         
