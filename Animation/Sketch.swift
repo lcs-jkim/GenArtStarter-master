@@ -29,11 +29,6 @@ class Sketch : NSObject {
         for _ in 1...5 {
             
             var speed = -1
-                
-            guard counter > -1 else {
-                canvas.fillColor = Color.purple
-                return
-            }
             
             if counter == 0 {
                 speed += 2
@@ -52,11 +47,11 @@ class Sketch : NSObject {
                                                       y: 0 ),
                                      drawsUpon: canvas)
             
-            counter += 1
+            
             
             agents.append(anotherAgent)
             
-            
+            counter += 1
         }
         
     }
