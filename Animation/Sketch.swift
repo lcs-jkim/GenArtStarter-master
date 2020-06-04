@@ -37,9 +37,14 @@ class Sketch : NSObject {
             
             if counter == 0 {
                 speed += 4
+            } else if counter == 2 {
+                speed += 4
+            } else if counter == 4 {
+                speed += 4
             } else {
                 speed += -4
             }
+            
             
             let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: 600 - (120 * counter)),
                                      radius: 30,
