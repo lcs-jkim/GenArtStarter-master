@@ -16,8 +16,9 @@ class Sketch : NSObject {
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
         
-        // No fill on canvas
-        canvas.drawShapesWithFill = false
+        // Draw shapes with fill and no border
+        canvas.drawShapesWithFill = true
+        canvas.drawShapesWithBorders = false
         
         // Create many instances of the Agent structure
         for _ in 1...20 {
