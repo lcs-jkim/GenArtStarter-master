@@ -28,7 +28,7 @@ class Sketch : NSObject {
         // Create many instances of the Agent structure
         for _ in 1...5 {
             
-            var speed = -2
+            var speed = -1
                 
             guard counter > -1 else {
                 canvas.fillColor = Color.purple
@@ -36,13 +36,13 @@ class Sketch : NSObject {
             }
             
             if counter == 0 {
-                speed += 4
+                speed += 2
             } else if counter == 2 {
-                speed += 4
+                speed += 2
             } else if counter == 4 {
-                speed += 4
+                speed += 2
             } else {
-                speed += -4
+                speed += 0
             }
             
             
