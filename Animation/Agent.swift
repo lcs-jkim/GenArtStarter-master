@@ -36,27 +36,8 @@ class Agent {
         centre = Point(x: centre.x + velocity.x,
                        y: centre.y + velocity.y)
         
-        // Bounce at edges
-        bounceAtEdge()
-        
         // Draw a circle at this point
         c.drawEllipse(at: centre, width: radius * 2, height: radius * 2)
-        
-    }
-    
-    // Bounce the agent when it hit's an edge
-    func bounceAtEdge() {
-        
-        // Bounce at left and right edges
-        if centre.x + CGFloat(radius) > CGFloat(c.width) || centre.x - CGFloat(radius) < 0 {
-            velocity.x *= -1
-        }
-        
-        // Bounce at top and bottom of scren
-        if centre.y + CGFloat(radius) > CGFloat(c.height) || centre.y - CGFloat(radius) < 0 {
-            velocity.y *= -1
-        }
-
         
     }
     
