@@ -24,19 +24,26 @@ class Sketch : NSObject {
         canvas.drawShapesWithFill = true
         
         
+        
         // Create many instances of the Agent structure
         for _ in 1...5 {
+            
+            var speed = -2
                 
-            if counter == 0 {
+            guard counter > -1 else {
                 canvas.fillColor = Color.purple
-            } else {
                 return
             }
             
+            if counter == 0 {
+                speed += 4
+            } else {
+                speed += -4
+            }
             
             let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: 600 - (120 * counter)),
                                      radius: 30,
-                                     velocity: Vector(x: Double.random(in: 2...2),
+                                     velocity: Vector(x: speed,
                                                       y: 0 ),
                                      drawsUpon: canvas)
             
