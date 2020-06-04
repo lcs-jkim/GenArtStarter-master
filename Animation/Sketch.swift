@@ -16,15 +16,23 @@ class Sketch : NSObject {
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
         
-        // No fill on canvas
-        canvas.drawShapesWithFill = true
-        canvas.fillColor = Color.purple
-        
         // This will come in handy to make the circles
-        var counter = 0
+              var counter = 0
+        
+        // No fill on canvas
+        canvas.drawShapesWithBorders = false
+        canvas.drawShapesWithFill = true
+        
         
         // Create many instances of the Agent structure
         for _ in 1...5 {
+                
+            if counter == 0 {
+                canvas.fillColor = Color.purple
+            } else {
+                return
+            }
+            
             
             let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: 600 - (120 * counter)),
                                      radius: 30,
