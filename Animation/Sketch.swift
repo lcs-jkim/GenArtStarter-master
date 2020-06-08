@@ -16,7 +16,13 @@ class Sketch : NSObject {
         // Draw shapes with fill and no border
         canvas.drawShapesWithFill = true
         canvas.drawShapesWithBorders = false
-     
+        
     }
     
+    // This function runs repeatedly, forever, to create the animated effect
+    func draw() {
+       
+     
+    }
+   
 }
