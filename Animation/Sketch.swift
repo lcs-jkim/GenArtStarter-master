@@ -27,10 +27,10 @@ class Sketch : NSObject {
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
-        right += 2
-        left -= 2
-        up += 2
-        down -= 2
+        right += 1
+        left -= 1
+        up += 1
+        down -= 1
         
         // Starting with the red line going right and up
         canvas.fillColor = Color.red
@@ -45,6 +45,10 @@ class Sketch : NSObject {
         // The yellow left down line now
         canvas.fillColor = Color.yellow
         canvas.drawEllipse(at: Point(x: left, y: down), width: 60, height: 60)
+        
+        // The final green left up line
+        canvas.fillColor = Color.green
+        canvas.drawEllipse(at: Point(x: left, y: up), width: 60, height: 60)
     }
    
 }
