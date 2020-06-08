@@ -37,6 +37,10 @@ class Sketch : NSObject {
         
         // We now start with a circle in the middle of the canvas
         canvas.drawEllipse(at: Point(x: right, y: up), width: 60, height: 60)
+        
+        // Now we're doing the blue down right line
+        canvas.fillColor = Color.blue
+        canvas.drawEllipse(at: Point(x: right, y: down), width: 60, height: 60)
     }
    
 }
