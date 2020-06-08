@@ -41,6 +41,10 @@ class Sketch : NSObject {
         // Now we're doing the blue down right line
         canvas.fillColor = Color.blue
         canvas.drawEllipse(at: Point(x: right, y: down), width: 60, height: 60)
+        
+        // The yellow left down line now
+        canvas.fillColor = Color.yellow
+        canvas.drawEllipse(at: Point(x: left, y: down), width: 60, height: 60)
     }
    
 }
