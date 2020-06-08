@@ -7,7 +7,6 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
-    
     // This function runs once
     override init() {
         
@@ -15,15 +14,19 @@ class Sketch : NSObject {
         canvas = Canvas(width: 700, height: 700)
         
         // Yes fill on canvas
-        canvas.drawShapesWithFill = false
+        canvas.drawShapesWithFill = true
+        canvas.drawShapesWithBorders = false
         
     }
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-       
+        
         // Clear the canvas
         clearCanvas()
+        
+        canvas.drawEllipse(at: Point(x: test, y: 350), width: 60, height: 60)
+        
         
     }
     
