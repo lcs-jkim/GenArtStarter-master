@@ -34,19 +34,19 @@ class Sketch : NSObject {
         canvas.fillColor = Color.purple
         
         // The first circle that moves to the right
-        canvas.drawEllipse(at: Point(x: right, y: 580), width: 60, height: 60)
+        canvas.drawEllipse(at: Point(x: right, y: 600), width: 60, height: 60)
     
         // Make the next one orange
         canvas.fillColor = Color.orange
         
         // And another circle but to the left now
-        canvas.drawEllipse(at: Point(x: left, y: 460), width: 60, height: 60)
+        canvas.drawEllipse(at: Point(x: left, y: 480), width: 60, height: 60)
         
         // Now a flouresent green line
         canvas.fillColor = Color.green
         
         // And another one to the right
-        canvas.drawEllipse(at: Point(x: right, y: 340), width: 60, height: 60)
+        canvas.drawEllipse(at: Point(x: right, y: 350), width: 60, height: 60)
         
         // Now a blue line
         canvas.fillColor = Color.blue
