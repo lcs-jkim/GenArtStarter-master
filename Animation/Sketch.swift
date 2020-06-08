@@ -7,7 +7,9 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
-    var x = 350
+    // The left one will decrease making circle go left and right increase so circle go right
+    var right = 350
+    var left = 350
     
     // This function runs once
     override init() {
@@ -28,9 +30,15 @@ class Sketch : NSObject {
         canvas.fillColor = Color.purple
         
         // The first circle that moves to the right
-        canvas.drawEllipse(at: Point(x: x, y: 580), width: 60, height: 60)
+        canvas.drawEllipse(at: Point(x: right, y: 580), width: 60, height: 60)
         
-        x += 2
+        right += 2
+        
+        // Make the next one orange
+        canvas.fillColor = Color.orange
+        
+        // And another circle but to the left now
+         canvas.drawEllipse(at: Point(x: left, y: 460), width: 60, height: 60)
         
     }
 
