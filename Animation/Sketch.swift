@@ -7,9 +7,6 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
-    // Create an array of many agents
-    var agents: [Agent] = []
-    
     // This function runs once
     override init() {
         
@@ -19,62 +16,7 @@ class Sketch : NSObject {
         // Draw shapes with fill and no border
         canvas.drawShapesWithFill = true
         canvas.drawShapesWithBorders = false
-        
-        var speedx = 2
-        
-        var speedy = 2
-        
-        var counter = 0
-        
-        // Creates 4 of the Agent structure
-        for _ in 1...4 {
-            
-            //depending on counter, changes x speed
-            switch counter {
-            case 1...1:
-                speedx = 2
-            default:
-                <#code#>
-            }
-            
-            let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: canvas.height / 2),
-                                     radius: 20,
-                                     velocity: Vector(x: (speedx),
-                                                      y: (speedy)),
-                                     drawsUpon: canvas)
-            
-            agents.append(anotherAgent)
-            
-            counter += 1
-            
-        }
-        
+     
     }
     
-    // This function runs repeatedly, forever, to create the animated effect
-    func draw() {
-       
-        // Clear the canvas
-        clearCanvas()
-        
-        // Update the position of the agent
-        for agent in agents {
-            agent.update()
-        }
-        
-    }
-    
-    // Clear the canvas
-    func clearCanvas() {
-        
-        // "Clear" the canvas after each draw
-        canvas.drawShapesWithBorders = false
-        canvas.drawShapesWithFill = true
-        canvas.fillColor = .white
-        canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
-        canvas.drawShapesWithFill = false
-        canvas.drawShapesWithBorders = true
-        
-    }
-   
 }
