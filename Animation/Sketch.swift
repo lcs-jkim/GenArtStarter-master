@@ -24,10 +24,14 @@ class Sketch : NSObject {
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
+        // Make the line purple
+        canvas.fillColor = Color.purple
+        
         // The first circle that moves to the right
         canvas.drawEllipse(at: Point(x: x, y: 580), width: 60, height: 60)
         
         x += 2
-}
+        
+    }
 
 }
