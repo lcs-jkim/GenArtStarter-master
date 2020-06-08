@@ -7,30 +7,14 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
-    // Create an array of many agents
-    var agents: [Agent] = []
+    // Horizontal position
+    var x = 350
     
     // This function runs once
     override init() {
         
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
-        
-        // No fill on canvas
-        canvas.drawShapesWithFill = false
-        
-        // Create many instances of the Agent structure
-        for _ in 1...20 {
-            
-            let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: canvas.height / 2),
-                                     radius: 20,
-                                     velocity: Vector(x: Double.random(in: -2...2),
-                                                      y: Double.random(in: -2...2)),
-                                     drawsUpon: canvas)
-            
-            agents.append(anotherAgent)
-            
-        }
         
     }
     
@@ -40,11 +24,10 @@ class Sketch : NSObject {
         // Clear the canvas
         clearCanvas()
         
-        // Update the position of the agent
-        for agent in agents {
-            agent.update()
-        }
+        // Draw a circle that moves to the right
+        canvas.drawEllipse(at: Point(x: x, y: canvas.height/2), width: 5, height: 5)
         
+        x += 1
     }
     
     // Clear the canvas
