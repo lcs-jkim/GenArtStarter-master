@@ -25,9 +25,9 @@ class Sketch : NSObject {
     func draw() {
         
         // The first circle that moves to the right
-        canvas.drawEllipse(at: Point(x: x, y: 580), width: 10, height: 10)
+        canvas.drawEllipse(at: Point(x: x, y: 580), width: 60, height: 60)
         
-        x += 1
+        x += 2
 }
 
 }
