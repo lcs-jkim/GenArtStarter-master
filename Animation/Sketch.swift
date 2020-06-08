@@ -7,6 +7,8 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
+    var x = 350
+    
     // This function runs once
     override init() {
         
@@ -19,25 +21,13 @@ class Sketch : NSObject {
         
     }
     
-    // Clear the canvas
-    func clearCanvas() {
-        
-        // "Clear" the canvas after each draw
-        canvas.drawShapesWithBorders = false
-        canvas.drawShapesWithFill = true
-        canvas.fillColor = .white
-        canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
-        canvas.drawShapesWithFill = false
-        canvas.drawShapesWithBorders = true
-        
-    }
-    
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
-        // Clears the canvas
-        clearCanvas()
-              
+        // The first circle that moves to the right
+        canvas.drawEllipse(at: Point(x: x, y: 580), width: 10, height: 10)
+        
+        x += 1
 }
 
 }
