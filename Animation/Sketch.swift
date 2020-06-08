@@ -21,7 +21,8 @@ class Sketch : NSObject {
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-    
+        
+        
     // Clear the canvas
     func clearCanvas() {
         
