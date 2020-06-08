@@ -19,10 +19,6 @@ class Sketch : NSObject {
         
     }
     
-    // This function runs repeatedly, forever, to create the animated effect
-    func draw() {
-        
-        
     // Clear the canvas
     func clearCanvas() {
         
@@ -35,7 +31,13 @@ class Sketch : NSObject {
         canvas.drawShapesWithBorders = true
         
     }
-      
+    
+    // This function runs repeatedly, forever, to create the animated effect
+    func draw() {
+        
+        // Clears the canvas
+        clearCanvas()
+              
 }
 
 }
