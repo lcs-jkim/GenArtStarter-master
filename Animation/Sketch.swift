@@ -25,9 +25,14 @@ class Sketch : NSObject {
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
-        canvas.drawEllipse(at: Point(x: x, y: pow(x, 2.0)), width: 30, height: 30)
+        canvas.drawEllipse(at: Point(x: x, y: -1 * pow(x - 130, 2.0) + 700), width: 30, height: 30)
         
-        x += 1
+        x += 0.5
+        
+        let y = -1 * pow(x, 2.0) + 700
+        
+        print(y)
+        print(x)
     }
 
     
