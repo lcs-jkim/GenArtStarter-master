@@ -10,6 +10,7 @@ class Sketch : NSObject {
     // This function runs once
     override init() {
         
+        
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
         
@@ -20,7 +21,13 @@ class Sketch : NSObject {
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-       
+        
+        // x will increase starting from 0 and y will be determined from x
+        var x = 0.0
+        
+        canvas.drawEllipse(at: Point(x: x, y: pow(x, 2.0)), width: 30, height: 30)
+        
+        x += 1
         
     }
     
