@@ -24,10 +24,6 @@ class Sketch : NSObject {
         let orange = Color(hue: 35, saturation: 90, brightness: 80, alpha: 100)
         let green = Color(hue: 107, saturation: 50, brightness: 38, alpha: 100)
         
-        canvas.defaultLineWidth = 10
-        canvas.lineColor = green
-        canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 700, y: 350))
-        
         // Draws the fun flower pot, starting with bottom
         // Make the lines
         canvas.drawShapesWithFill = false
@@ -56,20 +52,19 @@ class Sketch : NSObject {
         canvas.drawShapesWithBorders = true
         canvas.drawEllipse(at: Point(x: 350, y: 240), width: 300, height: 80)
         
+        // Setting the line color to green
+        canvas.lineColor = green
+        
     }
     
-    var counter = 0
+    var y = Double.random(in: 240...600)
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
-        // Set the line color to green for the grass
+        // Draws first grass that's a random height
+        canvas.drawLine(from: Point(x: 200, y: 240), to: Point(x: 200, y: y))
         
-        if counter < 10 {
-            
-        }
-        
-        counter += 1
     }
     
     // Clear the canvas
