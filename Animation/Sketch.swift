@@ -43,6 +43,7 @@ class Sketch : NSObject {
         canvas.defaultLineWidth = 7
         canvas.lineColor = brick
         canvas.drawLine(from: Point(x: 220, y: 100), to: Point(x: 200, y: 240))
+        canvas.drawLine(from: Point(x: 480, y: 100), to: Point(x: 500, y: 240))
         
     }
     
