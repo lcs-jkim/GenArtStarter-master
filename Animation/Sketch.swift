@@ -7,8 +7,6 @@ class Sketch : NSObject {
     //       Therefore, the line immediately below must always be present.
     let canvas: Canvas
     
-    // Create an array of many agents
-    var agents: [Agent] = []
     
     // This function runs once
     override init() {
@@ -40,6 +38,11 @@ class Sketch : NSObject {
         canvas.drawShapesWithFill = true
         canvas.drawShapesWithBorders = false
         canvas.drawRectangle(at: Point(x: 215, y: 100), width: 270, height: 80)
+        
+        // Make the sides of the pot
+        canvas.defaultLineWidth = 7
+        canvas.lineColor = brick
+        canvas.drawLine(from: Point(x: 220, y: 100), to: Point(x: 200, y: 240))
         
     }
     
