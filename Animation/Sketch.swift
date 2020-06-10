@@ -20,8 +20,9 @@ class Sketch : NSObject {
         let brick = Color(hue: 0, saturation: 39, brightness: 36, alpha: 1)
         
         // Test if it's the right color
-        canvas.lineColor = brick
-        canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 700, y: 350))
+        canvas.fillColor = brick
+        canvas.drawShapesWithFill = true
+        canvas.drawEllipse(at: Point(x: 350, y: 350), width: 200, height: 200)
         
         // Draws the fun flower pot
         
@@ -43,9 +44,6 @@ class Sketch : NSObject {
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
        
-        // Clear the canvas
-        clearCanvas()
-        
         // Update the position of the agent
         for agent in agents {
             agent.update()
