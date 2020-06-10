@@ -17,7 +17,7 @@ class Sketch : NSObject {
         canvas = Canvas(width: 700, height: 700)
         
         // Our funky brick color and flower colors
-        let brick = Color(hue: 0, saturation: 39, brightness: 36, alpha: 1)
+        let brick = Color(hue: 9, saturation: 60, brightness: 50, alpha: 100)
         
         // Test if it's the right color
         canvas.fillColor = brick
