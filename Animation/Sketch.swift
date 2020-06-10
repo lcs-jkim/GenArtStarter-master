@@ -45,6 +45,12 @@ class Sketch : NSObject {
         canvas.drawLine(from: Point(x: 220, y: 100), to: Point(x: 200, y: 240))
         canvas.drawLine(from: Point(x: 480, y: 100), to: Point(x: 500, y: 240))
         
+        // Now for the top part
+        canvas.fillColor = brick
+        canvas.drawShapesWithFill = false
+        canvas.drawShapesWithBorders = true
+        canvas.drawEllipse(at: Point(x: 350, y: 240), width: 300, height: 80)
+        
     }
     
     // This function runs repeatedly, forever, to create the animated effect
