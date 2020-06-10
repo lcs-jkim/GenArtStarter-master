@@ -16,8 +16,14 @@ class Sketch : NSObject {
         // Create canvas object – specify size
         canvas = Canvas(width: 700, height: 700)
         
-        // No fill on canvas
-        canvas.drawShapesWithFill = false
+        // Our funky brick color and flower colors
+        let brick = Color(hue: 0, saturation: 39, brightness: 36, alpha: 1)
+        
+        // Test if it's the right color
+        canvas.lineColor = brick
+        canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 700, y: 350))
+        
+        // Draws the fun flower pot
         
         // Create many instances of the Agent structure
         for _ in 1...20 {
