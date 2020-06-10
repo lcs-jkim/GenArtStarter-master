@@ -22,6 +22,11 @@ class Sketch : NSObject {
         let lightPurple = Color(hue: 279, saturation: 50, brightness: 85, alpha: 100)
         let lightBlue = Color(hue: 225, saturation: 50, brightness: 80, alpha: 100)
         let orange = Color(hue: 35, saturation: 90, brightness: 80, alpha: 100)
+        let green = Color(hue: 107, saturation: 50, brightness: 38, alpha: 100)
+        
+        canvas.defaultLineWidth = 10
+        canvas.lineColor = green
+        canvas.drawLine(from: Point(x: 0, y: 350), to: Point(x: 700, y: 350))
         
         // Draws the fun flower pot, starting with bottom
         // Make the lines
@@ -53,9 +58,18 @@ class Sketch : NSObject {
         
     }
     
+    var counter = 0
+    
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-               
+        
+        // Set the line color to green for the grass
+        
+        if counter < 10 {
+            
+        }
+        
+        counter += 1
     }
     
     // Clear the canvas
