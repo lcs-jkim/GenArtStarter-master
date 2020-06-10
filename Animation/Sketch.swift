@@ -21,9 +21,10 @@ class Sketch : NSObject {
         let pink = Color(hue: 324, saturation: 50, brightness: 75, alpha: 100)
         let red = Color(hue: 360, saturation: 60, brightness: 52, alpha: 100)
         let darkPurple = Color(hue: 298, saturation: 50, brightness: 30, alpha: 100)
+        let lightPurple = Color(hue: 279, saturation: 50, brightness: 85, alpha: 100)
         
         // Test if it's the right color
-        canvas.fillColor = darkPurple
+        canvas.fillColor = lightPurple
         canvas.drawShapesWithFill = true
         
         // Draws the fun flower pot
