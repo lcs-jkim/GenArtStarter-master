@@ -18,11 +18,11 @@ class Sketch : NSObject {
         
         // Our funky brick color and flower colors
         let brick = Color(hue: 9, saturation: 60, brightness: 50, alpha: 100)
+        let pink = Color(hue: 324, saturation: 50, brightness: 75, alpha: 100)
         
         // Test if it's the right color
-        canvas.fillColor = brick
+        canvas.fillColor = pink
         canvas.drawShapesWithFill = true
-        canvas.drawEllipse(at: Point(x: 350, y: 350), width: 200, height: 200)
         
         // Draws the fun flower pot
         
