@@ -25,35 +25,18 @@ class Sketch : NSObject {
         let lightBlue = Color(hue: 225, saturation: 50, brightness: 80, alpha: 100)
         let orange = Color(hue: 35, saturation: 90, brightness: 80, alpha: 100)
         
-        // Test if it's the right color
-        canvas.fillColor = orange
-        canvas.drawShapesWithFill = true
+        // Draws the fun flower pot, starting with bottom
+        // Make the lines
+        canvas.drawShapesWithFill = false
+        canvas.drawShapesWithBorders = true
+        canvas.borderColor = brick
         
-        // Draws the fun flower pot
-        
-        // Create many instances of the Agent structure
-        for _ in 1...20 {
-            
-            let anotherAgent = Agent(centre: Point(x: canvas.width / 2, y: canvas.height / 2),
-                                     radius: 20,
-                                     velocity: Vector(x: Double.random(in: -2...2),
-                                                      y: Double.random(in: -2...2)),
-                                     drawsUpon: canvas)
-            
-            agents.append(anotherAgent)
-            
-        }
         
     }
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
-       
-        // Update the position of the agent
-        for agent in agents {
-            agent.update()
-        }
-        
+               
     }
     
     // Clear the canvas
