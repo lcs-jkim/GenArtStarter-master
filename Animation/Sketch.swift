@@ -57,13 +57,18 @@ class Sketch : NSObject {
         
     }
     
+    var counter = 240.0
     var y = Double.random(in: 240...600)
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
         
         // Draws first grass that's a random height
-        canvas.drawLine(from: Point(x: 200, y: 240), to: Point(x: 200, y: y))
+        canvas.drawLine(from: Point(x: 200, y: 240), to: Point(x: 200, y: counter))
+        
+        if counter < y {
+            counter += 1
+        }
         
     }
     
