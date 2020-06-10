@@ -32,7 +32,8 @@ class Sketch : NSObject {
         canvas.borderColor = brick
         canvas.defaultBorderWidth = 7
         
-        canvas.drawEllipse(at: Point(x: 350, y: 100), width: 200, height: 100)
+        // The bottom of the pot
+        canvas.drawEllipse(at: Point(x: 350, y: 100), width: 260, height: 100)
         
     }
     
