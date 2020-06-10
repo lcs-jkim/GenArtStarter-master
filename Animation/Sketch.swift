@@ -30,7 +30,9 @@ class Sketch : NSObject {
         canvas.drawShapesWithFill = false
         canvas.drawShapesWithBorders = true
         canvas.borderColor = brick
+        canvas.defaultBorderWidth = 7
         
+        canvas.drawEllipse(at: Point(x: 350, y: 100), width: 200, height: 100)
         
     }
     
