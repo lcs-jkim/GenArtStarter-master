@@ -35,6 +35,12 @@ class Sketch : NSObject {
         // The bottom of the pot
         canvas.drawEllipse(at: Point(x: 350, y: 100), width: 260, height: 100)
         
+        // White rectangle to cover up the top part of the ellipse
+        canvas.fillColor = .white
+        canvas.drawShapesWithFill = true
+        canvas.drawShapesWithBorders = false
+        canvas.drawRectangle(at: Point(x: 215, y: 100), width: 270, height: 80)
+        
     }
     
     // This function runs repeatedly, forever, to create the animated effect
