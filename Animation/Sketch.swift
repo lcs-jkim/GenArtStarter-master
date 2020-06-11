@@ -60,9 +60,11 @@ class Sketch : NSObject {
     var grass = 240.0
     var grass1 = 240.0
     var grass2 = 240.0
+    var grass3 = 240.0
     var a = Double.random(in: 240...600)
     var b = Double.random(in: 240...600)
     var c = Double.random(in: 240...600)
+    var d = Double.random(in: 240...600)
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
@@ -85,6 +87,12 @@ class Sketch : NSObject {
         
         if grass2 < c {
             grass2 += 1
+        }
+        
+        canvas.drawLine(from: Point(x: 260, y: 200), to: Point(x: 260, y: grass3))
+        
+        if grass3 < d {
+            grass3 += 1
         }
         
     }
