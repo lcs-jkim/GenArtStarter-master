@@ -41,9 +41,6 @@ class Sketch : NSObject {
             color = pink
         }
         
-        canvas.fillColor = color
-        canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 300)
-        
         // Draws the fun flower pot, starting with bottom
         // Make the lines
         canvas.drawShapesWithFill = false
@@ -93,22 +90,22 @@ class Sketch : NSObject {
     var grass13 = 240.0
     var grass14 = 240.0
     var grass15 = 240.0
-    var a = Double.random(in: 240...600)
-    var b = Double.random(in: 240...600)
-    var c = Double.random(in: 240...600)
-    var d = Double.random(in: 240...600)
-    var e = Double.random(in: 240...600)
-    var f = Double.random(in: 240...600)
-    var g = Double.random(in: 240...600)
-    var h = Double.random(in: 240...600)
-    var i = Double.random(in: 240...600)
-    var j = Double.random(in: 240...600)
-    var k = Double.random(in: 240...600)
-    var l = Double.random(in: 240...600)
-    var m = Double.random(in: 240...600)
-    var n = Double.random(in: 240...600)
-    var o = Double.random(in: 240...600)
-    var p = Double.random(in: 240...600)
+    let a = Double.random(in: 240...600)
+    let b = Double.random(in: 240...600)
+    let c = Double.random(in: 240...600)
+    let d = Double.random(in: 240...600)
+    let e = Double.random(in: 240...600)
+    let f = Double.random(in: 240...600)
+    let g = Double.random(in: 240...600)
+    let h = Double.random(in: 240...600)
+    let i = Double.random(in: 240...600)
+    let j = Double.random(in: 240...600)
+    let k = Double.random(in: 240...600)
+    let l = Double.random(in: 240...600)
+    let m = Double.random(in: 240...600)
+    let n = Double.random(in: 240...600)
+    let o = Double.random(in: 240...600)
+    let p = Double.random(in: 240...600)
     
     // This function runs repeatedly, forever, to create the animated effect
     func draw() {
@@ -211,8 +208,6 @@ class Sketch : NSObject {
             grass15 += 1
         }
         
-        
     }
     
-   
 }
