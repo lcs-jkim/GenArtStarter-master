@@ -16,7 +16,33 @@ class Sketch : NSObject {
         
         // Our funky brick color and flower colors
         let brick = Color(hue: 9, saturation: 60, brightness: 50, alpha: 100)
+        let pink = Color(hue: 324, saturation: 50, brightness: 75, alpha: 100)
+        let red = Color(hue: 360, saturation: 60, brightness: 52, alpha: 100)
+        let darkPurple = Color(hue: 298, saturation: 50, brightness: 30, alpha: 100)
+        let lightPurple = Color(hue: 279, saturation: 50, brightness: 85, alpha: 100)
+        let lightBlue = Color(hue: 225, saturation: 50, brightness: 80, alpha: 100)
+        let orange = Color(hue: 35, saturation: 90, brightness: 80, alpha: 100)
         let green = Color(hue: 107, saturation: 50, brightness: 38, alpha: 100)
+        let randomNumber = Int.random(in: 2...6)
+        var color = Color.black
+        
+        switch randomNumber {
+        case 2:
+            color = red
+        case 3:
+            color = darkPurple
+        case 4:
+            color = lightPurple
+        case 5:
+            color = lightBlue
+        case 6:
+            color = orange
+        default:
+            color = pink
+        }
+        
+        canvas.fillColor = color
+        canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 300)
         
         // Draws the fun flower pot, starting with bottom
         // Make the lines
@@ -184,6 +210,7 @@ class Sketch : NSObject {
         if grass15 < p {
             grass15 += 1
         }
+        
         
     }
     
