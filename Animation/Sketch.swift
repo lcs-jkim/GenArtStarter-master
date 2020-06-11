@@ -107,17 +107,5 @@ class Sketch : NSObject {
         
     }
     
-    // Clear the canvas
-    func clearCanvas() {
-        
-        // "Clear" the canvas after each draw
-        canvas.drawShapesWithBorders = false
-        canvas.drawShapesWithFill = true
-        canvas.fillColor = .white
-        canvas.drawRectangle(at: Point(x: 0, y: 0), width: canvas.width, height: canvas.height)
-        canvas.drawShapesWithFill = false
-        canvas.drawShapesWithBorders = true
-        
-    }
    
 }
