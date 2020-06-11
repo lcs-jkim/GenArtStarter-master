@@ -23,9 +23,12 @@ class Sketch : NSObject {
         let lightBlue = Color(hue: 225, saturation: 50, brightness: 80, alpha: 100)
         let orange = Color(hue: 35, saturation: 90, brightness: 80, alpha: 100)
         let green = Color(hue: 107, saturation: 50, brightness: 38, alpha: 100)
+        
+        // chooses a random number that will correspond to a color, color variable as black until color is choosen
         let randomNumber = Int.random(in: 2...6)
         var color = Color.black
         
+        // Depending on the number choosen above, it will match with a color
         switch randomNumber {
         case 2:
             color = red
@@ -69,10 +72,14 @@ class Sketch : NSObject {
         canvas.drawShapesWithBorders = true
         canvas.drawEllipse(at: Point(x: 350, y: 240), width: 300, height: 80)
         
+        // Put fill and no borders for flowers that are solid circles
+        // Changed fill color to the selected one above
         canvas.drawShapesWithFill = true
         canvas.drawShapesWithBorders = false
         canvas.fillColor = color
         
+        // Chooses the amount of flowers
+        // Sets up counter so it will stop looping once reaching numberOfFlowers
         let numberOfFlowers = Int.random(in: 5...25)
         var counter = 0
         
