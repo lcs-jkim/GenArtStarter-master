@@ -41,6 +41,18 @@ class Sketch : NSObject {
             color = pink
         }
         
+        canvas.drawShapesWithFill = true
+        canvas.drawShapesWithBorders = false
+        canvas.fillColor = color
+        
+        let numberOfFlowers = Int.random(in: 5...25)
+        var counter = 0
+        
+        while counter < numberOfFlowers {
+            canvas.drawEllipse(at: Point(x: Double.random(in: 200...500), y: Double.random(in: 250...400)), width: 20, height: 20)
+            counter += 1
+        }
+        
         // Draws the fun flower pot, starting with bottom
         // Make the lines
         canvas.drawShapesWithFill = false
@@ -71,6 +83,8 @@ class Sketch : NSObject {
         
         // Setting the line color to green
         canvas.lineColor = green
+        
+        
         
     }
     
